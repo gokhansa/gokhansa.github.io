@@ -1,3 +1,3 @@
-# cakcora.github.io
+# gokhansa.github.io
 
-http://cakcora.github.io
+http://gokhansa.github.io
