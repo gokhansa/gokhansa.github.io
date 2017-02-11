@@ -1,0 +1,400 @@
+<html>
+<head>
+  <title>Essential readings</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+</head>
+<body>
+<h2>Essential readings on computer science</h2>
+<p><a href = "https://en.wikipedia.org/wiki/The_Mythical_Man-Month">The mythical man month</a> from Fred Brooks is the most essential reading in software engineering (Don't quote me on that). Concepts from this book will keep reappearing in the 'essential articles' that I list below. After reading it, you can consider reading <a href="https://en.wikipedia.org/wiki/Coders_at_work">Coders at work</a> for recent practices on software engineering.</p>
+<p>The full list will contain 37 required readings.</p>
+<table class="pure-table">
+   <thead>
+        <tr>
+          <th>Index</th>
+            <th>Article</th>
+            <th>Author</th>
+            <th>Required reading</th>
+            <th>Importance</th>
+            <th>Quotables</th>
+            <th>Pages</th>
+            <th>Published in</th>
+        </tr>
+    </thead>
+<tbody>
+  <tr class="pure-table-odd">
+    <td>0</td>
+    <td><a href="http://www.paulgraham.com/icad.html" target="_blank">Revenge of the nerds (in html)</a> <a href="https://www.eecis.udel.edu/~decker/courses/280f07/paper/Revenge.pdf">(in a nice PDF)</a></td>
+    <td>Paul Graham</td>
+    <td>None</td>
+    <td>Usually quoted in its last paragraph (that advises against software patterns), this article is actually about why and how programming languages are different from each other, and why you should not stick to the industry standard in choosing the language.</td>
+    <td> The disadvantage of believing that all programming languages are equivalent is that it's not true. But the advantage is that it makes your life a lot simpler. And I think that's the main reason the idea is so widespread. It is a comfortable idea.</td>
+    <td>9p</td>
+    <td>2002</td>
+  </tr>
+   <tr>
+     <td>1</td>
+    <td><a href="http://www.martinfowler.com/ieeeSoftware/protectedVariation.pdf" target="_blank">Protected Variation: The Importance of Being Closed.</a></td>
+    <td>Craig Larman</td>
+    <td>None</td>
+    <td>Explains the Protected Variation principle, which covers the Information Hiding and Open-Closed principles.</td>
+    <td> For example, I recall being surprised by the occasional use of static public final fields in the Java technology libraries (after spending many years with the Smalltalk libraries). Some might be poorly conceived, but some, such as the Color static fields red, black, white, and so forth, are extremely stable; the likelihood of instability is so low that making them private and adding accessing methods is just object purism.</td>
+    <td>3p</td>
+    <td>2001</td>
+  </tr>
+ <tr class="pure-table-odd">
+   <td>2</td>
+    <td><a href="https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf" target="_blank">On the Criteria To Be Used in Decomposing Systems into Modules.</a></td>
+    <td>D.L. Parnas</td>
+    <td>1</td>
+    <td>Gives a step by step decision process on what to consider in modularization.</td>
+    <td> It is almost always incorrect to begin the decomposition of a system into modules on the basis of a flowchart. We propose instead that one begins with a list of difficult design decisions or design decisions which are likely to change. Each module is then designed to hide such a decision from the others.</td>
+    <td>6p</td>
+    <td>1972</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><a href="http://people.inf.ethz.ch/wirth/Miscellaneous/IEEE-Annals.pdf" target="_blank">A Brief History of Software Engineering.</a></td>
+    <td>Niklaus Wirth</td>
+    <td>None</td>
+    <td>A must read article to see how the dots were connected in “computer science” (or “informatics” as they call it in Europe).</td>
+    <td> 
+    <ol>
+      <li>One might have classified C as being somewhere between misleading and even dangerous. But on the contrary, people at large, particularly in academia, found it intriguing and “better than assembly code”, because it featured some syntax.</li>
+      <li>	The Alto caused nothing less than a revolution, and as a result people to-day have no idea, how computing was done before 1975 without personal, highly interactive workstations.</li>
+      <li>	Modern languages like Java and C# may well be superior to old ones like Fortran, PL/I, and C, but they are far from perfect, and they could be much better. Their manuals of several hundred pages are an unmistakable symptom of their inadequacy.</li>
+    </ol>
+</td>
+    
+    <td>10p</td>
+    <td>2008</td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>4</td>
+    <td><a href="https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf" target="_blank">Reflections on trusting trust.</a></td>
+    <td>Ken Thompson</td>
+    <td>None</td>
+    <td>This is a Turing Award Lecture that I found somehow bland. But at least it poked my interest enough to make me write a Quine class for the first time.</td>
+    <td> The act of breaking into a computer system has to have the same social stigma as breaking into a neighbor's house. It should not matter that the neighbor's door is unlocked.</td>
+    <td>3p</td>
+    <td>1984</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><a href="https://en.wikipedia.org/wiki/No_Silver_Bullet" target="_blank">No silver bullet – Essence and accident in software engineering.</a></td>
+    <td>Fred Brooks</td>
+    <td>None</td>
+    <td>Turing award winner Brooks mentions all fundamental improvements software engineering had so far, and one by one explains why none of them is the magical panacea we seek. I especially liked his suggestions on how to nurture young talent and why it is important.</td>
+    <td>
+      <ol>
+        <li>There is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity.</li>
+        <li>Software people are not alone in facing complexity. Physics deal with terribly complex objects even at the fundamental particle level. The physicist labors on, however, in a firm faith that there are unifying principles to be found, whether in quarks or in unified field theories. Einstein repeatedly argued that there must be simplified explanations of nature, because God is not capricious or arbitrary. No such faith comforts the software engineer.</li>
+      </ol>
+    </td>
+    <td>16p</td>
+    <td>1986</td>
+  </tr>
+ <tr class="pure-table-odd">
+   <td>6</td>
+    <td><a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD02xx/EWD215.html" target="_blank">Case against the GO TO Statement.</a></td>
+    <td>Edsger Djisktra</td>
+    <td>None</td>
+    <td>Shows how a master can kill a (bad) practice (i.e., using go to statements) single handedly. For those looking for a short summary, Djisktra is convinced that “goto statements make it very hard to find a meaningful set of coordinates in which to describe the process progress”. In my words, this means that you cannot know which line the program was executing before or where it will return after. </td>
+    <td> Since a number of years I am familiar with the observation that the quality of programmers is a decreasing function of the density of the go to statements in the programs they produce.</td>
+    <td>5p</td>
+    <td>1968</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><a href="http://bat8.inria.fr/~lang/hotlist/free/licence/papers/gabriel/good-news/good-news.ps" target="_blank">Lisp: Good News, Bad News, How to Win Big.</a></td>
+    <td>Richard P. Gabriel</td>
+    <td>None</td>
+    <td>Written before C++ and Java became very popular, this article lists the ways things could go wrong for LISP. It is sad to see how they became true, at the end. </td>
+    <td>
+      <ol>
+      <li>Unix and C are the ultimate computer viruses.</li>
+      <li>The business leadership of the AI community seems to have adopted the worst caricature-like traits of business practice: secrecy, mistrust, run-up-the-score competitiveness. We are an industry that has enough common competitors without searching for them among our own ranks.</li>
+      </ol>	
+</td>
+    <td>18p</td>
+    <td>2000</td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>8</td>
+    <td><a href="lucacardelli.name/papers/onunderstanding.a4.pdf" target="_blank">On Understanding Types, Data Abstraction, and Polymorphism.</a></td>
+    <td>Luca Cardelli, Peter Wegner</td>
+    <td>None</td>
+    <td>This is the ultimate guide to abstraction, polymorphism and inheritance written a long time ago. It surveys the foundation on which object oriented design was founded.   </td>
+    <td>
+      <ol>
+        <li>The meaning of a piece of memory is critically determined by an external interpretation of its contents.</li>
+        <li>A type may be viewed as a set of clothes (or a suit of armor) that protects an underlying untyped representation from arbitrary or unintended use.</li>
+        <li>Object oriented = data abstraction + object type + type inheritance</li>
+      </ol>
+</td>
+    <td>42</td>
+    <td>1985</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>10</td>
+    <td><a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" target="_blank">Why Functional Programming Matters.</a></td>
+    <td>John Hughes</td>
+    <td>6</td>
+    <td>John explains how functional programming works. Two aspects of it, lazy evaluations and higher order functions, are the main themes in this article. Pay attention to the part where he explains how FP allows termination conditions to be separated from loop bodies. (Has a successor article <a href="http://nsr.oxfordjournals.org/content/early/2015/07/13/nsr.nwv042">How Functional Programming mattered</a>)</td>
+    <td>
+      <ol>
+        <li>Functional programming is so called because a program consists entirely of functions. The main program itself is written as a function which receives the program’s input as its argument and delivers the program’s output as its result.
+        </li>
+        <li>The special characteristics and advantages of functional programming are often summed up more or less as follows. Functional programs contain no assignment statements, so variables, once given a value, never change.   A function call can have no effect other than to compute its result. This eliminates a major source of bugs, and also makes the order of execution irrelevant . Since expressions can be evaluated at any time, one can freely replace variables by their values and vice versa - that is, programs are “referentially transparent”.
+        </li>
+        <li>Such a catalogue of “advantages” is all very well, but one must not be surprised if outsiders don’t take it too seriously. It says a lot about what functional programming is not (it has no assignment, no side effects, no flow of control) but not much about what it is. The functional programmer sounds rather like a medieval monk, denying himself the pleasures of life in the hope that it will make him virtuous.
+        </li>
+        <li>Only functional languages use lazy evaluation uniformly for every function call.
+        </li>
+        <li>The best analogy with conventional programming is with extensible languages - it is as though the programming language can be extended with new control structures whenever desired.
+        </li>
+      </ol>	
+    </td>
+    <td>23p</td>
+    <td>1984</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>A History of Haskell: Being LazyWith Class</td>
+    <td>Paul Hudak, John Hughes, Simon Peyton Jones</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>12</td>
+    <td>A Universal Modular ACTOR Formalism for Artificial Intelligence</td>
+    <td>Carl Hewitt, Peter Bishop, Richard Steiger</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>A rational design process: How and why to fake it</td>
+    <td>DAVID LORGE PARNAS AND PAUL C. CLEMENTS</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr class="pure-table-odd">
+    <td>14</td>
+    <td>A theory of the learnable</td>
+    <td>L, G. VALIANT</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Fundamental Concepts in Programming Languages</td>
+    <td>CHRISTOPHER STRACHEY</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>16</td>
+    <td>Arguments and Results</td>
+    <td>James Noble</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+    <td>17</td>
+    <td>An Axiomatic Basis for Computer Programming</td>
+    <td>C. A. R. HOARE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>18</td>
+    <td>Equal Rights for Functional Objects or, The More Things Change, The More They Are the Same</td>
+    <td>Henry G. Baker</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>F-Bounded Polymorphism for Object-Oriented Programming</td>
+    <td>Peter Canning, William Cook, Walter Hill, Walter Olthoff</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr class="pure-table-odd">
+    <td>20</td>
+    <td>Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs</td>
+    <td>John Backus</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>AN EXPERIMENTAL EVALUATION OF THE ASSUMPTION OF INDEPENDENCE IN MULTI-VERSION PROGRAMMING</td>
+    <td>John C. Knight Nancy, G. Leveson</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>22</td>
+    <td>Hundreds of impossibility results for distributed computing</td>
+    <td>Faith Fich, Eric Ruppert</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+    <td>23</td>
+    <td>What Every Programmer Should Know About Memory</td>
+    <td>Ulrich Drepper</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>24</td>
+    <td>ON COMPUTABLE NUMBERS, WITH AN APPLICATION TO THE ENTSCHEIDUNGSPROBLEM</td>
+    <td>Alan Turing</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>Tackling the Awkward Squad: monadic input/output, concurrency, exceptions, and foreign-language calls in Haskell</td>
+    <td>Simon PEYTON JONES</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr class="pure-table-odd">
+    <td>26</td>
+    <td>The Way of Testivus Less Unit Testing Dogma More Unit Testing Karma</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>Organizing Programs Without Classes</td>
+    <td>DAVID UNGAR, CRAIG CHAMBERS, BAY-WEI CHANG, URS HÖLZLE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>28</td>
+    <td>Programming as an Experience: The Inspiration for Self</td>
+    <td>Randall B. Smith and David Ungar</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+    <td>29</td>
+    <td>ON THE COMPUTATIONAL COMPLEXITY OF ALGORITHMS</td>
+    <td>J. HARTMANIS AND R. E. STEARNS</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>30</td>
+    <td>What every computer scientist should know about floating point arithmetic</td>
+    <td>David Goldberg</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>Predicate dispatching: a unified theory of dispatch</td>
+    <td>Michael Ernst, Craig Kaplan, and Craig Chambers</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr class="pure-table-odd">
+    <td>32</td>
+    <td>The Next 700 Programming Languages</td>
+    <td>P. J. Landin</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>Out of the Tar Pit</td>
+    <td>Ben Moseley, Peter Marks</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>34</td>
+    <td>Time, Clocks, and the Ordering of Events in a Distributed System</td>
+    <td>Leslie Lamport</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+    <td>35</td>
+    <td>The Transactional Memory / Garbage Collection Analogy</td>
+    <td>Dan Grossman</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="pure-table-odd">
+    <td>36</td>
+    <td>Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I</td>
+    <td>John McCarthy</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+ 
+  </tbody>
+  </table>
+ 
+</body>
+</html>

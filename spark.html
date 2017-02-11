@@ -1,0 +1,50 @@
+<html>
+
+<body>
+	
+	<h1>Spark documents, sources, books</h1>
+	<p> A comparison of Apache Spark and Apache Tez can be found <a href="BigDataProcessingFrameworks.pdf">here</a></p>
+	<p><a href="https://www.youtube.com/watch?v=Wg2boMqLjCg">Tips for Writing Better Spark Programs</a> </p>
+	<p><a href="https://www.youtube.com/watch?v=7ooZ4S7Ay6Y">Advanced Apache Spark Training - Sameer Farooqui (Databricks)</a> </p>
+	<p>Scaling Scala: Evaluating the <a href="https://www.oreilly.com/ideas/scaling-scala">state and development of Scala</a> from a data engineering perspective by McKinlay</p>
+	
+	
+	
+	<h1>Spark pitfalls</h1>
+
+Most of the pitfalls I had were system level minutia.  
+	<h2>System Level</h2>
+	
+<ul>
+<li> Using Spark with Intellij IDE if you encounter the error: Exception in thread "main" java.lang.IllegalArgumentException: System memory 259522560 must be at least 4.718592E8. Please use a larger heap size.
+Run->Edit Configurations, paste -Xms128m -Xmx512m -XX:MaxPermSize=300m -ea into VM options.</li>
+<li>Using Spark as a novice, when you get Failed to connect to master myhost:7077. In the code, val conf = new SparkConf().setAppName("myapp").setMaster("local[2]"). Here,  local[2] means two threads - which represents “minimal” parallelism (see http://spark.apache.org/docs/latest/configuration.html)</li>
+<li>Turn off Spark logs in Intellij IDE: create a log4j.xml file and put it under src/main/resources/. <a href="log4j.txt" target=_blank>Click here</a> for the content of the xml file. After this, Intellij will compain about log4j namespaces. Add a new <a href="http://mvnrepository.com/artifact/log4j">Log4J maven dependency</a> to your pom.xml file</li>
+<li>If you get java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries. Download winutils.exe from web and cput it somewhere like C:\winutils\bin . Go to your code and add the line System.setProperty("hadoop.home.dir", "c:/winutil/") to the beginning of your code. NOTE: Spark will find the bin folder itself, you should not write it in the code. </li>
+<li>If you get 'This version of %1 is not compatible with the version of Windows you're running.', you have the wrong version of winutils.exe. Go to Computer/System properties and check the operating system. If it is 32bit, search for the 32 bit version of winutils.exe. You can find it <a href="http://teknosrc.com/wp-content/uploads/2015/06/winutils.exe" target =_blank>here</a>. Read more <a href="http://teknosrc.com/spark-error-java-io-ioexception-could-not-locate-executable-null-bin-winutils-exe-hadoop-binaries/" target=_blank>here</a>. April 2016 Edit: Abandoned hope on solving this problem, started using fatjars</li>
+<li>When you submit spark jobs from an IDE, the jars that you distribute to the master with setJars() can have a big size (134 Mb in my case). In order to avoid this, you can use <code>&lt;scope&gt;provided&lt;scope&gt;</code> in maven, so that the specific dependency jar will not be packed into the uberjar you are creating. When you do this however, you get the ClassNotFoundException: org.apache.spark.SparkConf error. </li>
+<li>If you get java.lang.ClassNotFoundException when trying to submit uberJars/fatJars:  make sure that you have all of the maven-shade-plugin, scala-maven-plugin, and maven-compiler-plugin in your pom.xml. </li>
+<li>Initial job has not accepted any resources: you have asked for system resources, but the system does not have that much. Lower the number of executer cores you ask etc. </li>
+</ul>
+
+<h2>Code Level</h2>
+	<ul>
+		<li>Reading from hdfs in spark code: First upload your file to hdfs. 
+		<p><code>hadoop fs -mkdir /yourDirectory</code></p>
+		<p><code>hadoop fs -put localDir/your_file.txt /yourDirectory</code></p>
+		Then go to your server where you have the spark shell, and use <code>hdfs getconf -confKey fs.default.name</code>. You will see the port hdfs uses, such as hdfs://insight.master:54310. In your code, use  
+			<p><code>val ipAdress = 	10.***.***.***	</code></p>
+			<p><code>val file = sc.textFile("hdfs://"+ipAdress+":54310/your_directory/your_file.txt").count	</code></p>
+				
+		
+		 </li>
+	</ul>
+<h2>GraphX
+</h2>
+	
+	See <a href="https://github.com/cakcora/SparkGraphXTutorial/">this page </a>
+	<p></p>
+	<p></p>
+	<p></p>
+</body>
+</html>
